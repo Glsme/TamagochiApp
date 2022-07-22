@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		8533325D288A78EC00F36E2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533325C288A78EC00F36E2F /* AppDelegate.swift */; };
 		8533325F288A78EC00F36E2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533325E288A78EC00F36E2F /* SceneDelegate.swift */; };
-		85333261288A78EC00F36E2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85333260288A78EC00F36E2F /* ViewController.swift */; };
-		85333264288A78EC00F36E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85333262288A78EC00F36E2F /* Main.storyboard */; };
+		85333264288A78EC00F36E2F /* Select.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85333262288A78EC00F36E2F /* Select.storyboard */; };
 		85333266288A78ED00F36E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85333265288A78ED00F36E2F /* Assets.xcassets */; };
 		85333269288A78ED00F36E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85333267288A78ED00F36E2F /* LaunchScreen.storyboard */; };
 		85333271288A792D00F36E2F /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 85333270288A792D00F36E2F /* Documentation.docc */; };
+		8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */; };
+		8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85333259288A78EC00F36E2F /* TamagochiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TamagochiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8533325C288A78EC00F36E2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8533325E288A78EC00F36E2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85333260288A78EC00F36E2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		85333263288A78EC00F36E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85333263288A78EC00F36E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Select.storyboard; sourceTree = "<group>"; };
 		85333265288A78ED00F36E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85333268288A78ED00F36E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8533326A288A78ED00F36E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85333270288A792D00F36E2F /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
+		8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +61,24 @@
 		8533325B288A78EC00F36E2F /* TamagochiApp */ = {
 			isa = PBXGroup;
 			children = (
+				8548E327288AD42F00B3790D /* Select */,
 				8533325C288A78EC00F36E2F /* AppDelegate.swift */,
 				8533325E288A78EC00F36E2F /* SceneDelegate.swift */,
-				85333260288A78EC00F36E2F /* ViewController.swift */,
-				85333262288A78EC00F36E2F /* Main.storyboard */,
 				85333265288A78ED00F36E2F /* Assets.xcassets */,
 				85333267288A78ED00F36E2F /* LaunchScreen.storyboard */,
 				8533326A288A78ED00F36E2F /* Info.plist */,
 			);
 			path = TamagochiApp;
+			sourceTree = "<group>";
+		};
+		8548E327288AD42F00B3790D /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */,
+				8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */,
+				85333262288A78EC00F36E2F /* Select.storyboard */,
+			);
+			path = Select;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +141,7 @@
 			files = (
 				85333269288A78ED00F36E2F /* LaunchScreen.storyboard in Resources */,
 				85333266288A78ED00F36E2F /* Assets.xcassets in Resources */,
-				85333264288A78EC00F36E2F /* Main.storyboard in Resources */,
+				85333264288A78EC00F36E2F /* Select.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85333261288A78EC00F36E2F /* ViewController.swift in Sources */,
+				8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */,
 				8533325D288A78EC00F36E2F /* AppDelegate.swift in Sources */,
 				8533325F288A78EC00F36E2F /* SceneDelegate.swift in Sources */,
+				8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */,
 				85333271288A792D00F36E2F /* Documentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,12 +163,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		85333262288A78EC00F36E2F /* Main.storyboard */ = {
+		85333262288A78EC00F36E2F /* Select.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				85333263288A78EC00F36E2F /* Base */,
 			);
-			name = Main.storyboard;
+			name = Select.storyboard;
 			sourceTree = "<group>";
 		};
 		85333267288A78ED00F36E2F /* LaunchScreen.storyboard */ = {
@@ -297,8 +309,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +322,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,8 +339,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,7 +352,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
