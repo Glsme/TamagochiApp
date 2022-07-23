@@ -13,6 +13,8 @@
 		85333266288A78ED00F36E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85333265288A78ED00F36E2F /* Assets.xcassets */; };
 		85333269288A78ED00F36E2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85333267288A78ED00F36E2F /* LaunchScreen.storyboard */; };
 		85333271288A792D00F36E2F /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 85333270288A792D00F36E2F /* Documentation.docc */; };
+		853B89C1288C263D00E0DB9C /* TamagochiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89C0288C263D00E0DB9C /* TamagochiData.swift */; };
+		853B89C3288C26D000E0DB9C /* SelectTamagochi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89C2288C26D000E0DB9C /* SelectTamagochi.swift */; };
 		8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */; };
 		8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		85333268288A78ED00F36E2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8533326A288A78ED00F36E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85333270288A792D00F36E2F /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		853B89C0288C263D00E0DB9C /* TamagochiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagochiData.swift; sourceTree = "<group>"; };
+		853B89C2288C26D000E0DB9C /* SelectTamagochi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTamagochi.swift; sourceTree = "<group>"; };
 		8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
 		8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,8 @@
 				8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */,
 				8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */,
 				85333262288A78EC00F36E2F /* Select.storyboard */,
+				853B89C0288C263D00E0DB9C /* TamagochiData.swift */,
+				853B89C2288C26D000E0DB9C /* SelectTamagochi.swift */,
 			);
 			path = Select;
 			sourceTree = "<group>";
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */,
+				853B89C1288C263D00E0DB9C /* TamagochiData.swift in Sources */,
 				8533325D288A78EC00F36E2F /* AppDelegate.swift in Sources */,
+				853B89C3288C26D000E0DB9C /* SelectTamagochi.swift in Sources */,
 				8533325F288A78EC00F36E2F /* SceneDelegate.swift in Sources */,
 				8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */,
 				85333271288A792D00F36E2F /* Documentation.docc in Sources */,
@@ -308,7 +316,7 @@
 				INFOPLIST_FILE = TamagochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Select;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -338,7 +346,7 @@
 				INFOPLIST_FILE = TamagochiApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Select;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

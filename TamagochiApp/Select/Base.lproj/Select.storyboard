@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5GJ-On-XJz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,19 +17,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VLp-vX-G52">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="137" height="139"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectCollectionViewCell" id="m79-Hp-2ly" customClass="SelectCollectionViewCell" customModule="TamagochiApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="137" height="139"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u7j-oN-wWP">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="137" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YZ5-Wo-Rxa">
+                                            <rect key="frame" x="8" y="0.0" width="121" height="139"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UVn-6h-2cT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="UVn-6h-2cT" secondAttribute="height" id="Yr4-ER-2Si"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQd-aQ-8wf">
+                                                    <rect key="frame" x="0.0" y="121" width="121" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YZ5-Wo-Rxa" firstAttribute="leading" secondItem="u7j-oN-wWP" secondAttribute="leading" constant="8" id="0av-jj-Pf9"/>
+                                        <constraint firstAttribute="trailing" secondItem="YZ5-Wo-Rxa" secondAttribute="trailing" constant="8" id="gtS-3u-eSS"/>
+                                        <constraint firstAttribute="bottom" secondItem="YZ5-Wo-Rxa" secondAttribute="bottom" id="osU-ko-aTc"/>
+                                        <constraint firstItem="YZ5-Wo-Rxa" firstAttribute="top" secondItem="u7j-oN-wWP" secondAttribute="top" id="vkp-Um-b1o"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <size key="customSize" width="137" height="139"/>
+                                <connections>
+                                    <outlet property="selectImageView" destination="UVn-6h-2cT" id="2HF-VJ-f9W"/>
+                                    <outlet property="selectLabel" destination="SQd-aQ-8wf" id="eaS-2Q-oxZ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -40,7 +70,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsR-q3-mBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="137"/>
+            <point key="canvasLocation" x="63.768115942028992" y="136.60714285714286"/>
         </scene>
     </scenes>
     <resources>
