@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 다마고치 선택화면 CollectionViewCell
 class SelectCollectionViewCell: UICollectionViewCell {
     static var identifier = "SelectCollectionViewCell"
     
@@ -17,5 +18,4 @@ class SelectCollectionViewCell: UICollectionViewCell {
         selectImageView.image = UIImage(named: data.image)
         selectLabel.text = data.name
     }
-    
 }

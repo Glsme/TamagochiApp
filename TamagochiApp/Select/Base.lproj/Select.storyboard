@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5GJ-On-XJz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qIL-l0-IQt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Select Collection View Controller-->
+        <!--다마고치 선택하기-->
         <scene sceneID="Y97-AM-ap4">
             <objects>
                 <collectionViewController storyboardIdentifier="SelectCollectionViewController" id="5GJ-On-XJz" customClass="SelectCollectionViewController" customModule="TamagochiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,17 +30,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="137" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YZ5-Wo-Rxa">
-                                            <rect key="frame" x="8" y="0.0" width="121" height="139"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YZ5-Wo-Rxa">
+                                            <rect key="frame" x="12" y="0.0" width="113" height="139"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UVn-6h-2cT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="UVn-6h-2cT" secondAttribute="height" id="Yr4-ER-2Si"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQd-aQ-8wf">
-                                                    <rect key="frame" x="0.0" y="121" width="121" height="18"/>
+                                                    <rect key="frame" x="0.0" y="118" width="113" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Lh2-Fj-05p"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -49,8 +52,7 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="YZ5-Wo-Rxa" firstAttribute="leading" secondItem="u7j-oN-wWP" secondAttribute="leading" constant="8" id="0av-jj-Pf9"/>
-                                        <constraint firstAttribute="trailing" secondItem="YZ5-Wo-Rxa" secondAttribute="trailing" constant="8" id="gtS-3u-eSS"/>
+                                        <constraint firstItem="YZ5-Wo-Rxa" firstAttribute="centerX" secondItem="u7j-oN-wWP" secondAttribute="centerX" id="Xa3-f4-IZI"/>
                                         <constraint firstAttribute="bottom" secondItem="YZ5-Wo-Rxa" secondAttribute="bottom" id="osU-ko-aTc"/>
                                         <constraint firstItem="YZ5-Wo-Rxa" firstAttribute="top" secondItem="u7j-oN-wWP" secondAttribute="top" id="vkp-Um-b1o"/>
                                     </constraints>
@@ -67,8 +69,27 @@
                             <outlet property="delegate" destination="5GJ-On-XJz" id="A3S-Oq-Btj"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="다마고치 선택하기" id="JL1-Qg-ZNL"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsR-q3-mBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="136.60714285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D3w-n9-0Og">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qIL-l0-IQt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8dI-eS-LYt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5GJ-On-XJz" kind="relationship" relationship="rootViewController" id="0zW-oc-9vh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FGP-Eg-35M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="63.768115942028992" y="136.60714285714286"/>
         </scene>
