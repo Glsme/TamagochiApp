@@ -13,7 +13,7 @@ class EditingNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = UISetting.backgroundColor
         userNameTextField.text = UserDefaults.standard.string(forKey: "userName")
     }
     
@@ -26,5 +26,4 @@ class EditingNameViewController: UIViewController {
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-    
 }

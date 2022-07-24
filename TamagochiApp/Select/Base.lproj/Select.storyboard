@@ -148,7 +148,7 @@
                                         <rect key="frame" x="0.0" y="406.5" width="331" height="0.0"/>
                                         <color key="backgroundColor" red="0.30196078431372547" green="0.41568627450980389" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="0.20000000000000001" id="hlb-Oi-VlM"/>
+                                            <constraint firstAttribute="height" constant="0.25" id="hlb-Oi-VlM"/>
                                         </constraints>
                                     </view>
                                 </subviews>

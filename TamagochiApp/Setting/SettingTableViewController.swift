@@ -64,7 +64,10 @@ class SettingTableViewController: UITableViewController {
     
     func showInitAlert() {
         let alert = UIAlertController(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가용?", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "웅", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "웅", style: .default) { action in
+            self.initData()
+            self.changeView()
+        }
         let cancelAction = UIAlertAction(title: "아냐!", style: .cancel, handler: nil)
         
         alert.addAction(okAction)
@@ -74,4 +77,23 @@ class SettingTableViewController: UITableViewController {
         
     }
 
+    func changeView() {
+        let storyBoard = UIStoryboard(name: "Select", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as! SelectCollectionViewController
+        let navigationController = UINavigationController(rootViewController: vc)
+        
+        navigationController.modalPresentationStyle = .overFullScreen
+        self.present(navigationController, animated: true)
+    }
+    
+    func initData() {
+        UserDefaults.standard.removeObject(forKey: "rice")
+        UserDefaults.standard.removeObject(forKey: "water")
+        UserDefaults.standard.removeObject(forKey: "level")
+        UserDefaults.standard.removeObject(forKey: "userName")
+        UserDefaults.standard.removeObject(forKey: "tamagochiImageString")
+        UserDefaults.standard.removeObject(forKey: "tamagochiName")
+        UserDefaults.standard.removeObject(forKey: "First")
+        
+    }
 }

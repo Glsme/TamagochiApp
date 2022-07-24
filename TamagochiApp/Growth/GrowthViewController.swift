@@ -38,7 +38,7 @@ class GrowthViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UISetting.fontColor, .font: UIFont.systemFont(ofSize: 14, weight: .semibold)]
         
         UISetting.setNameLabelUI(label: titleLabel)
-        titleLabel.text = name
+        titleLabel.text = UserDefaults.standard.string(forKey: "tamagochiName")
         
         growthLabel.textColor = UISetting.fontColor
         growthLabel.font = .systemFont(ofSize: 13, weight: .semibold)

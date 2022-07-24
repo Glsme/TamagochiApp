@@ -24,7 +24,6 @@
 		853B89E6288D482C00E0DB9C /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89E5288D482C00E0DB9C /* SettingTableViewController.swift */; };
 		8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */; };
 		8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */; };
-		85C82446288D4EC300FBB5DE /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C82445288D4EC300FBB5DE /* SettingTableViewCell.swift */; };
 		85C8244C288D709300FBB5DE /* EditingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C8244B288D709300FBB5DE /* EditingNameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 		853B89E5288D482C00E0DB9C /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
 		8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
-		85C82445288D4EC300FBB5DE /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		85C8244B288D709300FBB5DE /* EditingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				853B89E5288D482C00E0DB9C /* SettingTableViewController.swift */,
-				85C82445288D4EC300FBB5DE /* SettingTableViewCell.swift */,
 				85C8244B288D709300FBB5DE /* EditingNameViewController.swift */,
 			);
 			path = Setting;
@@ -224,7 +221,6 @@
 				85C8244C288D709300FBB5DE /* EditingNameViewController.swift in Sources */,
 				853B89CC288C3D8700E0DB9C /* TamagochiInfoViewController.swift in Sources */,
 				8533325F288A78EC00F36E2F /* SceneDelegate.swift in Sources */,
-				85C82446288D4EC300FBB5DE /* SettingTableViewCell.swift in Sources */,
 				853B89CE288CD39A00E0DB9C /* UISetting.swift in Sources */,
 				853B89E1288D2EC600E0DB9C /* TalkMent.swift in Sources */,
 				8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */,
