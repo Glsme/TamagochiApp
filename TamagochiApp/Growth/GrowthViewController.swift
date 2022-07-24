@@ -66,6 +66,14 @@ class GrowthViewController: UIViewController {
         
         UserDefaults.standard.set(true, forKey: "First")
         
+        if UserDefaults.standard.string(forKey: "userName") == nil || UserDefaults.standard.string(forKey: "userName") == "" {
+            UserDefaults.standard.set("대장", forKey: "userName")
+            let userName = UserDefaults.standard.string(forKey: "userName")!
+            self.navigationItem.title = "\(userName)님의 다마고치"
+        } else {
+            let userName = UserDefaults.standard.string(forKey: "userName")!
+            self.navigationItem.title = "\(userName)님의 다마고치"
+        }
     }
     
     func setButtonUI() {
