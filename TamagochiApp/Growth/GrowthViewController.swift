@@ -11,13 +11,20 @@ import UIKit
 class GrowthViewController: UIViewController {
     
     static var identifier = "GrowthViewController"
-
+    @IBOutlet weak var talkLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var growthLabel: UILabel!
+    @IBOutlet weak var SelectedImageView: UIImageView!
+    
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UISetting.backgroundColor
         
-//        self.navigationController?.navigationBar.backgroundColor = .white
+        UISetting.setNameLabelUI(label: titleLabel)
+        titleLabel.text = name
     }
 
 }

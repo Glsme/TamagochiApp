@@ -59,6 +59,8 @@ class TamagochiInfoViewController: UIViewController {
         guard let vc = storyBoard.instantiateViewController(withIdentifier: GrowthViewController.identifier) as? GrowthViewController else { return }
         let navigationController = UINavigationController(rootViewController: vc)
         
+        vc.name = titleLabel.text
+        
         navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: false)
     }

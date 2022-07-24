@@ -12,4 +12,12 @@ struct UISetting {
     static var backgroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
     static var regularFont = UIFont.systemFont(ofSize: 13, weight: .regular)
     
+    static func setNameLabelUI(label: UILabel) {
+        label.textColor = UISetting.fontColor
+        label.backgroundColor = UISetting.backgroundColor
+        label.layer.borderColor = UISetting.fontColor.cgColor
+        label.layer.borderWidth = 1
+        label.layer.cornerRadius = 2
+        label.font = .systemFont(ofSize: 13, weight: .semibold)
+    }
 }

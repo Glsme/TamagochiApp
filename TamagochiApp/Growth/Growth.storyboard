@@ -55,7 +55,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4e-Jd-d5r">
                                         <rect key="frame" x="152.5" y="0.0" width="75.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title=" 밥먹기" image="drop.circle" catalog="system">
@@ -82,7 +82,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD7-ot-SnI">
                                         <rect key="frame" x="152.5" y="0.0" width="75.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title=" 물먹기" image="leaf.circle" catalog="system">
@@ -94,6 +94,12 @@
                                     <constraint firstItem="gqN-Ai-Tup" firstAttribute="width" secondItem="FBW-J5-EtI" secondAttribute="width" multiplier="0.45" constant="44.799999999999997" id="w0e-Uo-FSr"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM0-pP-K3d">
+                                <rect key="frame" x="114" y="207" width="186" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -109,6 +115,8 @@
                             <constraint firstItem="qXc-hZ-dqE" firstAttribute="top" secondItem="RDp-OP-1GR" secondAttribute="bottom" constant="20" id="a8v-Kl-2fI"/>
                             <constraint firstItem="Ceh-hI-bzR" firstAttribute="top" secondItem="UJW-c6-TSN" secondAttribute="bottom" constant="10" id="bWq-uG-mmk"/>
                             <constraint firstItem="Ceh-hI-bzR" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.5" id="cYo-zc-RRM"/>
+                            <constraint firstItem="yM0-pP-K3d" firstAttribute="width" secondItem="UJW-c6-TSN" secondAttribute="width" multiplier="0.9" id="eXB-Uh-lnV"/>
+                            <constraint firstItem="yM0-pP-K3d" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="f3f-ma-API"/>
                             <constraint firstItem="Ceh-hI-bzR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fjE-nh-wYa"/>
                             <constraint firstItem="UJW-c6-TSN" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.15" id="ore-f3-v3P"/>
                             <constraint firstItem="FBW-J5-EtI" firstAttribute="top" secondItem="qXc-hZ-dqE" secondAttribute="bottom" constant="10" id="qfN-Os-sDO"/>
@@ -116,9 +124,16 @@
                             <constraint firstItem="7SJ-Rv-XNR" firstAttribute="width" secondItem="Ceh-hI-bzR" secondAttribute="width" id="u1M-XI-m18"/>
                             <constraint firstItem="FBW-J5-EtI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xpt-v6-QmK"/>
                             <constraint firstItem="RDp-OP-1GR" firstAttribute="top" secondItem="7SJ-Rv-XNR" secondAttribute="bottom" constant="10" id="yWk-6s-qJ8"/>
+                            <constraint firstItem="yM0-pP-K3d" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.48" id="zkf-2g-gLI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="대장님의 다마고치" id="eqN-fJ-FGZ"/>
+                    <connections>
+                        <outlet property="SelectedImageView" destination="Ceh-hI-bzR" id="1FA-fV-1JR"/>
+                        <outlet property="growthLabel" destination="RDp-OP-1GR" id="pmm-x2-3iB"/>
+                        <outlet property="talkLabel" destination="yM0-pP-K3d" id="lGC-aj-fJk"/>
+                        <outlet property="titleLabel" destination="7SJ-Rv-XNR" id="l8i-4q-mC6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
