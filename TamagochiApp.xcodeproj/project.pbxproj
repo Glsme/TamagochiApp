@@ -169,7 +169,6 @@
 			mainGroup = 85333250288A78EC00F36E2F;
 			packageReferences = (
 				853B89DC288D2AB500E0DB9C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				853B89DF288D2AD800E0DB9C /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
 			);
 			productRefGroup = 8533325A288A78EC00F36E2F /* Products */;
 			projectDirPath = "";
@@ -439,14 +438,6 @@
 			requirement = {
 				kind = exactVersion;
 				version = 6.5.0;
-			};
-		};
-		853B89DF288D2AD800E0DB9C /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/raulriera/TextFieldEffects";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
