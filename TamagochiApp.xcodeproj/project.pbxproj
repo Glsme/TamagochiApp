@@ -20,6 +20,7 @@
 		853B89D1288D003C00E0DB9C /* Growth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853B89D0288D003C00E0DB9C /* Growth.storyboard */; };
 		853B89D4288D011200E0DB9C /* GrowthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89D3288D011200E0DB9C /* GrowthViewController.swift */; };
 		853B89DE288D2AB500E0DB9C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 853B89DD288D2AB500E0DB9C /* IQKeyboardManagerSwift */; };
+		853B89E1288D2EC600E0DB9C /* TalkMent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89E0288D2EC600E0DB9C /* TalkMent.swift */; };
 		8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */; };
 		8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		853B89CD288CD39A00E0DB9C /* UISetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISetting.swift; sourceTree = "<group>"; };
 		853B89D0288D003C00E0DB9C /* Growth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Growth.storyboard; sourceTree = "<group>"; };
 		853B89D3288D011200E0DB9C /* GrowthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthViewController.swift; sourceTree = "<group>"; };
+		853B89E0288D2EC600E0DB9C /* TalkMent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkMent.swift; sourceTree = "<group>"; };
 		8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
 		8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			children = (
 				853B89D0288D003C00E0DB9C /* Growth.storyboard */,
 				853B89D3288D011200E0DB9C /* GrowthViewController.swift */,
+				853B89E0288D2EC600E0DB9C /* TalkMent.swift */,
 			);
 			path = Growth;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				853B89CC288C3D8700E0DB9C /* TamagochiInfoViewController.swift in Sources */,
 				8533325F288A78EC00F36E2F /* SceneDelegate.swift in Sources */,
 				853B89CE288CD39A00E0DB9C /* UISetting.swift in Sources */,
+				853B89E1288D2EC600E0DB9C /* TalkMent.swift in Sources */,
 				8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */,
 				85333271288A792D00F36E2F /* Documentation.docc in Sources */,
 			);

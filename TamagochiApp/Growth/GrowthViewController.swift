@@ -34,6 +34,9 @@ class GrowthViewController: UIViewController {
         growthLabel.textColor = UISetting.fontColor
         growthLabel.font = .systemFont(ofSize: 13, weight: .semibold)
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
+        talkLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        talkLabel.text = "안녕하세요~!"
+        talkLabel.textColor = UISetting.fontColor
         
     }
 
@@ -50,20 +53,23 @@ class GrowthViewController: UIViewController {
         }
         riceTextField.text = ""
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
+        talkLabel.text = TalkMent.talkMent.randomElement()
     }
     
     @IBAction func waterButtonClicked(_ sender: UIButton) {
         if waterTextField.text! == "" {
             water += 1
         } else {
-            if Int(riceTextField.text!) != nil {
-                rice += Int(riceTextField.text!)!
+            if Int(waterTextField.text!) != nil {
+                water += Int(waterTextField.text!)!
             } else {
-                riceTextField.placeholder = "숫자만 입력해주세요"
+                waterTextField.placeholder = "숫자만 입력해주세요"
             }
         }
-        
+        waterTextField.text = ""
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
+        talkLabel.text = TalkMent.talkMent.randomElement()
+
     }
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
