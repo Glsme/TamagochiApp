@@ -55,7 +55,12 @@ class TamagochiInfoViewController: UIViewController {
     
     /// 시작하기 버튼 클릭 시 동작 구현
     @IBAction func startButtonClicked(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Growth", bundle: nil)
+        guard let vc = storyBoard.instantiateViewController(withIdentifier: GrowthViewController.identifier) as? GrowthViewController else { return }
+        let navigationController = UINavigationController(rootViewController: vc)
         
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: false)
     }
     
     ///취소 버튼 클릭 시 동작 구현
