@@ -63,8 +63,6 @@ class SelectCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-
 
         if indexPath.row < tamagochiList.tamaghochiData.count {
             let storyBorad = UIStoryboard(name: "Select", bundle: nil)

@@ -25,6 +25,10 @@ class GrowthViewController: UIViewController {
     var rice = 0
     var water = 0
     
+    override func viewWillAppear(_ animated: Bool) {
+        talkLabel.text = TalkMent.talkMent.randomElement()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +42,6 @@ class GrowthViewController: UIViewController {
         growthLabel.font = .systemFont(ofSize: 13, weight: .semibold)
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
         talkLabel.font = .systemFont(ofSize: 13, weight: .semibold)
-        talkLabel.text = "안녕하세요~!"
         talkLabel.textColor = UISetting.fontColor
         
         setButtonUI()
@@ -58,7 +61,13 @@ class GrowthViewController: UIViewController {
             
         } else {
             if Int(riceTextField.text!) != nil {
-                rice += Int(riceTextField.text!)!
+                if Int(riceTextField.text!)! < 99 {
+                    rice += Int(riceTextField.text!)!
+                } else {
+                    riceTextField.text = ""
+                    riceTextField.placeholder = "99 이하로 입력해주세요"
+                    return
+                }
             } else {
                 riceTextField.placeholder = "숫자만 입력해주세요"
             }
@@ -73,7 +82,12 @@ class GrowthViewController: UIViewController {
             water += 1
         } else {
             if Int(waterTextField.text!) != nil {
-                water += Int(waterTextField.text!)!
+                if Int(waterTextField.text!)! < 49 {
+                    water += Int(waterTextField.text!)!
+                } else {
+                    waterTextField.text = ""
+                    waterTextField.placeholder = "49 이하로 입력해주세요"
+                }
             } else {
                 waterTextField.placeholder = "숫자만 입력해주세요"
             }
@@ -83,6 +97,7 @@ class GrowthViewController: UIViewController {
         talkLabel.text = TalkMent.talkMent.randomElement()
 
     }
+    
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }

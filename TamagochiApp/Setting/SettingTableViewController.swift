@@ -43,7 +43,23 @@ class SettingTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        if indexPath.row == 2 {
+            showInitAlert()
+        } else if indexPath.row == 1 {
+            
+        }
+    }
+    
+    func showInitAlert() {
+        let alert = UIAlertController(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가용?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "웅", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "아냐!", style: .cancel, handler: nil)
+        
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+        
     }
 
 }
