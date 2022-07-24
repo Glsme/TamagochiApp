@@ -166,9 +166,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="SelectedImageView" destination="Ceh-hI-bzR" id="1FA-fV-1JR"/>
                         <outlet property="growthLabel" destination="RDp-OP-1GR" id="pmm-x2-3iB"/>
                         <outlet property="riceTextField" destination="BOa-UU-Scj" id="nrT-w9-rZ7"/>
+                        <outlet property="selectedImageView" destination="Ceh-hI-bzR" id="zrX-p9-Vk2"/>
                         <outlet property="talkLabel" destination="yM0-pP-K3d" id="lGC-aj-fJk"/>
                         <outlet property="titleLabel" destination="7SJ-Rv-XNR" id="l8i-4q-mC6"/>
                         <outlet property="waterTextField" destination="gqN-Ai-Tup" id="BhK-kR-gqD"/>

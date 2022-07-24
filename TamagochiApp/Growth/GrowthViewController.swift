@@ -14,7 +14,7 @@ class GrowthViewController: UIViewController {
     @IBOutlet weak var talkLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var growthLabel: UILabel!
-    @IBOutlet weak var SelectedImageView: UIImageView!
+    @IBOutlet weak var selectedImageView: UIImageView!
     @IBOutlet weak var riceTextField: UITextField!
     @IBOutlet weak var waterTextField: UITextField!
     @IBOutlet var buttons: [UIButton]!
@@ -24,6 +24,8 @@ class GrowthViewController: UIViewController {
     var level = 1
     var rice = 0
     var water = 0
+    var imageString: String?
+    var imageInt = 1
     
     override func viewWillAppear(_ animated: Bool) {
         talkLabel.text = TalkMent.talkMent.randomElement()
@@ -40,11 +42,30 @@ class GrowthViewController: UIViewController {
         
         growthLabel.textColor = UISetting.fontColor
         growthLabel.font = .systemFont(ofSize: 13, weight: .semibold)
-        growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
+        
         talkLabel.font = .systemFont(ofSize: 13, weight: .semibold)
         talkLabel.textColor = UISetting.fontColor
         
         setButtonUI()
+        
+        if UserDefaults.standard.integer(forKey: "rice") != 0 {
+            self.rice = UserDefaults.standard.integer(forKey: "rice")
+        }
+        
+        if UserDefaults.standard.integer(forKey: "water") != 0 {
+            self.water = UserDefaults.standard.integer(forKey: "water")
+        }
+        
+        if UserDefaults.standard.integer(forKey: "level") != 0 {
+            self.level = UserDefaults.standard.integer(forKey: "level")
+        }
+        
+        loadImageString()
+        setImage()
+        growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
+        
+        UserDefaults.standard.set(true, forKey: "First")
+        
     }
     
     func setButtonUI() {
@@ -61,7 +82,7 @@ class GrowthViewController: UIViewController {
             
         } else {
             if Int(riceTextField.text!) != nil {
-                if Int(riceTextField.text!)! < 99 {
+                if Int(riceTextField.text!)! < 100 {
                     rice += Int(riceTextField.text!)!
                 } else {
                     riceTextField.text = ""
@@ -73,8 +94,14 @@ class GrowthViewController: UIViewController {
             }
         }
         riceTextField.text = ""
+        calculateLevel()
+        loadImageString()
+        setImage()
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
         talkLabel.text = TalkMent.talkMent.randomElement()
+        UserDefaults.standard.set(self.imageString, forKey: "tamagochiImageString")
+        UserDefaults.standard.set(self.rice, forKey: "rice")
+        UserDefaults.standard.set(self.level, forKey: "level")
     }
     
     @IBAction func waterButtonClicked(_ sender: UIButton) {
@@ -82,7 +109,7 @@ class GrowthViewController: UIViewController {
             water += 1
         } else {
             if Int(waterTextField.text!) != nil {
-                if Int(waterTextField.text!)! < 49 {
+                if Int(waterTextField.text!)! < 50 {
                     water += Int(waterTextField.text!)!
                 } else {
                     waterTextField.text = ""
@@ -93,9 +120,79 @@ class GrowthViewController: UIViewController {
             }
         }
         waterTextField.text = ""
+        calculateLevel()
+        loadImageString()
+        setImage()
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
         talkLabel.text = TalkMent.talkMent.randomElement()
-
+        UserDefaults.standard.set(self.water, forKey: "water")
+        UserDefaults.standard.set(self.level, forKey: "level")
+    }
+    
+    func calculateLevel() {
+        let calculator: Double = Double(rice/5) + Double(water/2)
+//        print(calculator)
+        switch calculator {
+        case 0..<20:
+            level = 1
+        case 20..<30:
+            level = 2
+        case 30..<40:
+            level = 3
+        case 40..<50:
+            level = 4
+        case 50..<60:
+            level = 5
+        case 60..<70:
+            level = 6
+        case 70..<80:
+            level = 7
+        case 80..<90:
+            level = 8
+        case 90..<100:
+            level = 9
+        case 100...:
+            level = 10
+        default:
+            level = 1
+        }
+    }
+    
+    func setImage() {
+        guard let imageString = self.imageString else { return }
+        switch self.level {
+        case 0...1:
+            selectedImageView.image = UIImage(named: imageString + "\(level)")
+        case 2:
+            selectedImageView.image = UIImage(named: imageString + "\(level)")
+        case 3:
+            selectedImageView.image = UIImage(named: imageString + "\(level)")
+        case 4:
+            selectedImageView.image = UIImage(named: imageString + "\(level)")
+        case 5:
+            selectedImageView.image = UIImage(named: imageString + "\(level)")
+        case 6:
+            selectedImageView.image = UIImage(named: imageString + "\(level)")
+        case 7:
+            selectedImageView.image = UIImage(named: imageString + "\(level)")
+        case 8:
+            selectedImageView.image = UIImage(named: imageString + "\(level)")
+        case 9...:
+            selectedImageView.image = UIImage(named: imageString + "\(9)")
+        default:
+            break
+        }
+    }
+    
+    func loadImageString() {
+        guard let image = UserDefaults.standard.string(forKey: "tamagochiImageString") else { return }
+        if image.contains("1-") {
+            self.imageString = "1-"
+        } else if image.contains("2-") {
+            self.imageString = "2-"
+        } else if image.contains("3-") {
+            self.imageString = "3-"
+        }
     }
     
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {

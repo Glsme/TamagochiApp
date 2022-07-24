@@ -61,6 +61,9 @@ class TamagochiInfoViewController: UIViewController {
         
         vc.name = titleLabel.text
         
+        UserDefaults.standard.set(self.name!, forKey: "tamagochiName")
+        UserDefaults.standard.set(self.imageString!, forKey: "tamagochiImageString")
+        
         navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: false)
     }
