@@ -10,9 +10,9 @@ import UIKit
 ///다마고치 선택화면 Controller
 class SelectCollectionViewController: UICollectionViewController {
 
-    var tamagochiList = TamagochiData()
-    
     static var identifier = "SelectCollectionViewController"
+    
+    var tamagochiList = TamagochiData()
     
 
     override func viewDidLoad() {
@@ -53,12 +53,39 @@ class SelectCollectionViewController: UICollectionViewController {
         // UI setting
         cell.selectLabel.font = .systemFont(ofSize: 13, weight: .regular)
         cell.selectLabel.layer.cornerRadius = 2
-        cell.selectLabel.layer.backgroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1).cgColor
-        cell.selectLabel.textColor = UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1)
+        cell.selectLabel.layer.backgroundColor = UISetting.backgroundColor.cgColor
+        cell.selectLabel.textColor = UISetting.fontColor
         cell.selectLabel.layer.borderWidth = 1
-        cell.selectLabel.layer.borderColor = UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1).cgColor
+        cell.selectLabel.layer.borderColor = UISetting.fontColor.cgColor
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBorad = UIStoryboard(name: "Select", bundle: nil)
+        guard let vc = storyBorad.instantiateViewController(withIdentifier: TamagochiInfoViewController.identifier) as? TamagochiInfoViewController else { return }
+
+
+        if indexPath.row < tamagochiList.tamaghochiData.count {
+
+//            switch indexPath.row {
+//            case 0:
+//
+//            case 1:
+//
+//            case 2:
+//
+//            default:
+//                break
+//            }
+        } else {
+
+
+        }
+
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true)
+
     }
 
 }
