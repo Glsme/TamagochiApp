@@ -29,6 +29,7 @@ class GrowthViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UISetting.backgroundColor
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UISetting.fontColor, .font: UIFont.systemFont(ofSize: 14, weight: .semibold)]
         
         UISetting.setNameLabelUI(label: titleLabel)
         titleLabel.text = name

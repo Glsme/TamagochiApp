@@ -8,9 +8,13 @@
 import UIKit
 
 class SettingTableViewController: UITableViewController {
+    
+    var userName = "대장"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = UISetting.fontColor
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -18,9 +22,28 @@ class SettingTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell") else { return UITableViewCell() }
         
-        return UITableViewCell()
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "EditiingTableViewCell") else { return UITableViewCell() }
+            cell.detailTextLabel?.text = "\(userName)"
+            cell.detailTextLabel?.textColor = UISetting.fontColor
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChangingTableViewCell") else { return UITableViewCell() }
+            return cell
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InitTableViewCell") else { return UITableViewCell() }
+            return cell
+        default:
+            return UITableViewCell()
+            
+
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 
 }

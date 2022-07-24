@@ -223,6 +223,9 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="h1A-et-Xfj" kind="show" id="Tqf-zS-iNm"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChangingTableViewCell" textLabel="OM1-XM-xQb" imageView="ccZ-KD-1gg" style="IBUITableViewCellStyleDefault" id="UVO-Ma-S3F">
                                 <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
@@ -231,7 +234,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="내 이름 설정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OM1-XM-xQb">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="다마고치 변경하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OM1-XM-xQb">
                                             <rect key="frame" x="55.5" y="0.0" width="322" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
@@ -254,7 +257,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="내 이름 설정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vRq-Oe-ELk">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="데이터 초기화" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vRq-Oe-ELk">
                                             <rect key="frame" x="55.5" y="0.0" width="322" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
@@ -278,12 +281,52 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="설정" id="Ucb-qo-5c0">
-                        <barButtonItem key="backBarButtonItem" title=" " id="A8W-ID-oIS"/>
+                        <barButtonItem key="backBarButtonItem" title=" 설정" id="A8W-ID-oIS"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXH-Jw-Cz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1955" y="117"/>
+        </scene>
+        <!--대장님 이름 정하기-->
+        <scene sceneID="fZs-4h-h9M">
+            <objects>
+                <viewController storyboardIdentifier="EditingNameViewController" id="h1A-et-Xfj" customClass="EditingNameViewController" customModule="TamagochiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lRe-2e-Htz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="대장님 이름을 알려주세요!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dCP-ji-hhC">
+                                <rect key="frame" x="41.5" y="108" width="331" height="17.5"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDZ-KW-U7a">
+                                <rect key="frame" x="41.5" y="127.5" width="331" height="1"/>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="lk5-qS-NSM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b6N-gp-d6l"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sDZ-KW-U7a" firstAttribute="width" secondItem="dCP-ji-hhC" secondAttribute="width" id="27k-6s-Htw"/>
+                            <constraint firstItem="dCP-ji-hhC" firstAttribute="top" secondItem="b6N-gp-d6l" secondAttribute="top" constant="20" id="ZNc-4R-5t3"/>
+                            <constraint firstItem="dCP-ji-hhC" firstAttribute="centerX" secondItem="lRe-2e-Htz" secondAttribute="centerX" id="gNm-5J-TDG"/>
+                            <constraint firstItem="sDZ-KW-U7a" firstAttribute="centerX" secondItem="lRe-2e-Htz" secondAttribute="centerX" id="hTR-Qt-FKD"/>
+                            <constraint firstItem="dCP-ji-hhC" firstAttribute="width" secondItem="lRe-2e-Htz" secondAttribute="width" multiplier="0.8" id="pbX-RI-QtX"/>
+                            <constraint firstItem="sDZ-KW-U7a" firstAttribute="top" secondItem="dCP-ji-hhC" secondAttribute="bottom" constant="2" id="zQ4-Wh-OMK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="대장님 이름 정하기" id="NfE-Bn-uIf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIT-ei-LtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2841" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="shY-bi-7j6">
