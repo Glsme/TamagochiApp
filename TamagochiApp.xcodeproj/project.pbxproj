@@ -21,8 +21,10 @@
 		853B89D4288D011200E0DB9C /* GrowthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89D3288D011200E0DB9C /* GrowthViewController.swift */; };
 		853B89DE288D2AB500E0DB9C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 853B89DD288D2AB500E0DB9C /* IQKeyboardManagerSwift */; };
 		853B89E1288D2EC600E0DB9C /* TalkMent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89E0288D2EC600E0DB9C /* TalkMent.swift */; };
+		853B89E6288D482C00E0DB9C /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89E5288D482C00E0DB9C /* SettingTableViewController.swift */; };
 		8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */; };
 		8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */; };
+		85C82446288D4EC300FBB5DE /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C82445288D4EC300FBB5DE /* SettingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +43,10 @@
 		853B89D0288D003C00E0DB9C /* Growth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Growth.storyboard; sourceTree = "<group>"; };
 		853B89D3288D011200E0DB9C /* GrowthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthViewController.swift; sourceTree = "<group>"; };
 		853B89E0288D2EC600E0DB9C /* TalkMent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkMent.swift; sourceTree = "<group>"; };
+		853B89E5288D482C00E0DB9C /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
 		8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
+		85C82445288D4EC300FBB5DE /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		8533325B288A78EC00F36E2F /* TamagochiApp */ = {
 			isa = PBXGroup;
 			children = (
+				853B89E2288D44C000E0DB9C /* Setting */,
 				853B89D5288D060400E0DB9C /* Data */,
 				853B89D2288D008D00E0DB9C /* Growth */,
 				8548E327288AD42F00B3790D /* Select */,
@@ -95,7 +100,6 @@
 			children = (
 				853B89D0288D003C00E0DB9C /* Growth.storyboard */,
 				853B89D3288D011200E0DB9C /* GrowthViewController.swift */,
-				853B89E0288D2EC600E0DB9C /* TalkMent.swift */,
 			);
 			path = Growth;
 			sourceTree = "<group>";
@@ -105,8 +109,18 @@
 			children = (
 				853B89C0288C263D00E0DB9C /* TamagochiData.swift */,
 				853B89C2288C26D000E0DB9C /* SelectTamagochi.swift */,
+				853B89E0288D2EC600E0DB9C /* TalkMent.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		853B89E2288D44C000E0DB9C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				853B89E5288D482C00E0DB9C /* SettingTableViewController.swift */,
+				85C82445288D4EC300FBB5DE /* SettingTableViewCell.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		8548E327288AD42F00B3790D /* Select */ = {
@@ -198,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853B89E6288D482C00E0DB9C /* SettingTableViewController.swift in Sources */,
 				8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */,
 				853B89D4288D011200E0DB9C /* GrowthViewController.swift in Sources */,
 				853B89C1288C263D00E0DB9C /* TamagochiData.swift in Sources */,
@@ -205,6 +220,7 @@
 				853B89C3288C26D000E0DB9C /* SelectTamagochi.swift in Sources */,
 				853B89CC288C3D8700E0DB9C /* TamagochiInfoViewController.swift in Sources */,
 				8533325F288A78EC00F36E2F /* SceneDelegate.swift in Sources */,
+				85C82446288D4EC300FBB5DE /* SettingTableViewCell.swift in Sources */,
 				853B89CE288CD39A00E0DB9C /* UISetting.swift in Sources */,
 				853B89E1288D2EC600E0DB9C /* TalkMent.swift in Sources */,
 				8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */,

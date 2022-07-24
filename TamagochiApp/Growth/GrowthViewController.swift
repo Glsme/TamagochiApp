@@ -17,6 +17,8 @@ class GrowthViewController: UIViewController {
     @IBOutlet weak var SelectedImageView: UIImageView!
     @IBOutlet weak var riceTextField: UITextField!
     @IBOutlet weak var waterTextField: UITextField!
+    @IBOutlet var buttons: [UIButton]!
+    
     
     var name: String?
     var level = 1
@@ -38,6 +40,15 @@ class GrowthViewController: UIViewController {
         talkLabel.text = "안녕하세요~!"
         talkLabel.textColor = UISetting.fontColor
         
+        setButtonUI()
+    }
+    
+    func setButtonUI() {
+        for item in buttons {
+            item.layer.borderWidth = 1
+            item.layer.borderColor = UISetting.fontColor.cgColor
+            item.layer.cornerRadius = 4
+        }
     }
 
     @IBAction func riceButtonClicked(_ sender: UIButton) {
