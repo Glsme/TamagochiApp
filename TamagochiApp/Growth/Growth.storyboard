@@ -316,6 +316,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b6N-gp-d6l"/>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="sDZ-KW-U7a" firstAttribute="width" secondItem="dCP-ji-hhC" secondAttribute="width" id="27k-6s-Htw"/>
                             <constraint firstItem="dCP-ji-hhC" firstAttribute="top" secondItem="b6N-gp-d6l" secondAttribute="top" constant="20" id="ZNc-4R-5t3"/>
@@ -324,6 +325,9 @@
                             <constraint firstItem="dCP-ji-hhC" firstAttribute="width" secondItem="lRe-2e-Htz" secondAttribute="width" multiplier="0.8" id="pbX-RI-QtX"/>
                             <constraint firstItem="sDZ-KW-U7a" firstAttribute="top" secondItem="dCP-ji-hhC" secondAttribute="bottom" constant="2" id="zQ4-Wh-OMK"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gMn-du-HgK" appends="YES" id="VZD-bE-rqX"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="대장님 이름 정하기" id="NfE-Bn-uIf"/>
                     <connections>
@@ -331,6 +335,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIT-ei-LtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gMn-du-HgK">
+                    <connections>
+                        <action selector="tapGestureRecognized:" destination="h1A-et-Xfj" id="UkO-73-0W6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2841" y="117"/>
         </scene>

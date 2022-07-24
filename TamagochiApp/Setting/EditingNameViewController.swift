@@ -13,10 +13,18 @@ class EditingNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userNameTextField.text = UserDefaults.standard.string(forKey: "userName")
     }
     
     @IBAction func changeUserName(_ sender: UITextField) {
-        print("User Name Changed: \(userNameTextField.text)")
+        if userNameTextField.text != nil {
+            UserDefaults.standard.set(userNameTextField.text!, forKey: "userName")
+        }
+    }
+    
+    @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
 }

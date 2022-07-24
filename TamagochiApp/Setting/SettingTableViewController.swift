@@ -15,6 +15,12 @@ class SettingTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.tintColor = UISetting.fontColor
+        
+        if UserDefaults.standard.string(forKey: "userName") == nil || UserDefaults.standard.string(forKey: "userName") == "" {
+            UserDefaults.standard.set("대장", forKey: "userName")
+        } else {
+            self.userName = UserDefaults.standard.string(forKey: "userName")!
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
