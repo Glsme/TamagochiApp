@@ -52,6 +52,12 @@ class SettingTableViewController: UITableViewController {
         if indexPath.row == 2 {
             showInitAlert()
         } else if indexPath.row == 1 {
+            let storyBoard = UIStoryboard(name: "Select", bundle: nil)
+            let vc = storyBoard.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as! SelectCollectionViewController
+            
+//            let navigationController = UINavigationController(rootViewController: vc)
+            vc.navigationItem.title = "다마고치 변경하기"
+            self.navigationController?.pushViewController(vc, animated: true)
             
         }
     }
