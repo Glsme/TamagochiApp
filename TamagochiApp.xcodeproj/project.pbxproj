@@ -19,6 +19,7 @@
 		853B89CE288CD39A00E0DB9C /* UISetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89CD288CD39A00E0DB9C /* UISetting.swift */; };
 		853B89D1288D003C00E0DB9C /* Growth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853B89D0288D003C00E0DB9C /* Growth.storyboard */; };
 		853B89D4288D011200E0DB9C /* GrowthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B89D3288D011200E0DB9C /* GrowthViewController.swift */; };
+		853B89D8288D177A00E0DB9C /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 853B89D7288D177A00E0DB9C /* TextFieldEffects */; };
 		8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */; };
 		8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853B89D8288D177A00E0DB9C /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,9 @@
 			dependencies = (
 			);
 			name = TamagochiApp;
+			packageProductDependencies = (
+				853B89D7288D177A00E0DB9C /* TextFieldEffects */,
+			);
 			productName = TamagochiApp;
 			productReference = 85333259288A78EC00F36E2F /* TamagochiApp.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 85333250288A78EC00F36E2F;
+			packageReferences = (
+				853B89D6288D177A00E0DB9C /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = 8533325A288A78EC00F36E2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -418,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		853B89D6288D177A00E0DB9C /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		853B89D7288D177A00E0DB9C /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 853B89D6288D177A00E0DB9C /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 85333251288A78EC00F36E2F /* Project object */;
 }
