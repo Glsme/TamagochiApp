@@ -62,30 +62,22 @@ class SelectCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBorad = UIStoryboard(name: "Select", bundle: nil)
-        guard let vc = storyBorad.instantiateViewController(withIdentifier: TamagochiInfoViewController.identifier) as? TamagochiInfoViewController else { return }
+        
 
 
         if indexPath.row < tamagochiList.tamaghochiData.count {
-
-//            switch indexPath.row {
-//            case 0:
-//
-//            case 1:
-//
-//            case 2:
-//
-//            default:
-//                break
-//            }
-        } else {
-
+            let storyBorad = UIStoryboard(name: "Select", bundle: nil)
+            guard let vc = storyBorad.instantiateViewController(withIdentifier: TamagochiInfoViewController.identifier) as? TamagochiInfoViewController else { return }
+            
+            vc.name = tamagochiList.tamaghochiData[indexPath.row].name
+            vc.overview = tamagochiList.tamaghochiData[indexPath.row].overView
+            vc.imageString = tamagochiList.tamaghochiData[indexPath.row].image
+            
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: true)
 
         }
-
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: true)
-
+        
     }
 
 }

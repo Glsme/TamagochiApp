@@ -10,4 +10,5 @@ import Foundation
 struct SelectTamagochi {
     var name: String
     var image: String
+    var overView: String?
 }

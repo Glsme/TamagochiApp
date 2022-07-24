@@ -70,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				8548E327288AD42F00B3790D /* Select */,
+				853B89CD288CD39A00E0DB9C /* UISetting.swift */,
 				8533325C288A78EC00F36E2F /* AppDelegate.swift */,
 				8533325E288A78EC00F36E2F /* SceneDelegate.swift */,
 				85333265288A78ED00F36E2F /* Assets.xcassets */,
@@ -82,13 +83,12 @@
 		8548E327288AD42F00B3790D /* Select */ = {
 			isa = PBXGroup;
 			children = (
+				853B89CB288C3D8700E0DB9C /* TamagochiInfoViewController.swift */,
 				8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */,
 				8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */,
 				85333262288A78EC00F36E2F /* Select.storyboard */,
-				853B89CB288C3D8700E0DB9C /* TamagochiInfoViewController.swift */,
 				853B89C0288C263D00E0DB9C /* TamagochiData.swift */,
 				853B89C2288C26D000E0DB9C /* SelectTamagochi.swift */,
-				853B89CD288CD39A00E0DB9C /* UISetting.swift */,
 			);
 			path = Select;
 			sourceTree = "<group>";
