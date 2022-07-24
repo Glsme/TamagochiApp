@@ -43,14 +43,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qXc-hZ-dqE">
                                 <rect key="frame" x="93" y="583.5" width="228" height="34"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="밥주세용" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOa-UU-Scj">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="밥주세용" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOa-UU-Scj">
                                         <rect key="frame" x="0.0" y="0.0" width="147.5" height="34"/>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.98935526789999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="kGG-QG-E2t"/>
                                         </constraints>
-                                        <color key="textColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4e-Jd-d5r">
@@ -61,6 +60,9 @@
                                         <state key="normal" title=" 밥먹기" image="drop.circle" catalog="system">
                                             <color key="titleColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="riceButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tjw-cQ-fnO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -70,7 +72,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FBW-J5-EtI">
                                 <rect key="frame" x="93" y="627.5" width="228" height="34"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="물주세용" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqN-Ai-Tup">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="물주세용" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqN-Ai-Tup">
                                         <rect key="frame" x="0.0" y="0.0" width="147.5" height="34"/>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.98935526789999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -88,6 +90,9 @@
                                         <state key="normal" title=" 물먹기" image="leaf.circle" catalog="system">
                                             <color key="titleColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="waterButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WoP-UI-BVl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -103,6 +108,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UJW-c6-TSN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0ei-0c-u7l"/>
                             <constraint firstItem="FBW-J5-EtI" firstAttribute="width" secondItem="qXc-hZ-dqE" secondAttribute="width" id="26A-nT-iGT"/>
@@ -126,16 +132,30 @@
                             <constraint firstItem="RDp-OP-1GR" firstAttribute="top" secondItem="7SJ-Rv-XNR" secondAttribute="bottom" constant="10" id="yWk-6s-qJ8"/>
                             <constraint firstItem="yM0-pP-K3d" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.48" id="zkf-2g-gLI"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Awc-6v-649" appends="YES" id="3cN-6b-OCc"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="대장님의 다마고치" id="eqN-fJ-FGZ"/>
+                    <navigationItem key="navigationItem" title="대장님의 다마고치" id="eqN-fJ-FGZ">
+                        <barButtonItem key="rightBarButtonItem" image="person.circle" catalog="system" id="oGA-DA-qrw">
+                            <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="SelectedImageView" destination="Ceh-hI-bzR" id="1FA-fV-1JR"/>
                         <outlet property="growthLabel" destination="RDp-OP-1GR" id="pmm-x2-3iB"/>
+                        <outlet property="riceTextField" destination="BOa-UU-Scj" id="nrT-w9-rZ7"/>
                         <outlet property="talkLabel" destination="yM0-pP-K3d" id="lGC-aj-fJk"/>
                         <outlet property="titleLabel" destination="7SJ-Rv-XNR" id="l8i-4q-mC6"/>
+                        <outlet property="waterTextField" destination="gqN-Ai-Tup" id="BhK-kR-gqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Awc-6v-649">
+                    <connections>
+                        <action selector="tapGestureRecognized:" destination="Y6W-OH-hqX" id="BvU-rF-BOF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
         </scene>
@@ -166,6 +186,7 @@
         <image name="bubble" width="222" height="142"/>
         <image name="drop.circle" catalog="system" width="128" height="121"/>
         <image name="leaf.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
