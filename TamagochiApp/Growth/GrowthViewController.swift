@@ -16,6 +16,8 @@ class GrowthViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UISetting.backgroundColor
+        
+//        self.navigationController?.navigationBar.backgroundColor = .white
     }
 
 }

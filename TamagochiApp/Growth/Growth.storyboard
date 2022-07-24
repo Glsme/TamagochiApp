@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2tf-g1-tkv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -15,8 +15,108 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ceh-hI-bzR">
+                                <rect key="frame" x="103.5" y="299.5" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ceh-hI-bzR" secondAttribute="height" id="yJ6-5G-0pQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubble" translatesAutoresizingMaskIntoConstraints="NO" id="UJW-c6-TSN">
+                                <rect key="frame" x="103.5" y="155.5" width="207" height="134"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-Rv-XNR">
+                                <rect key="frame" x="103.5" y="516.5" width="207" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="IUl-Zq-hlU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDp-OP-1GR">
+                                <rect key="frame" x="190.5" y="547.5" width="33" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qXc-hZ-dqE">
+                                <rect key="frame" x="93" y="583.5" width="228" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="밥주세용" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOa-UU-Scj">
+                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="34"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.98935526789999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="kGG-QG-E2t"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4e-Jd-d5r">
+                                        <rect key="frame" x="152.5" y="0.0" width="75.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" 밥먹기" image="drop.circle" catalog="system">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BOa-UU-Scj" firstAttribute="width" secondItem="qXc-hZ-dqE" secondAttribute="width" multiplier="0.45" constant="44.799999999999997" id="xSf-9x-K9c"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FBW-J5-EtI">
+                                <rect key="frame" x="93" y="627.5" width="228" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="물주세용" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gqN-Ai-Tup">
+                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="34"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.98935526789999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Yad-3j-Erm"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD7-ot-SnI">
+                                        <rect key="frame" x="152.5" y="0.0" width="75.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" 물먹기" image="leaf.circle" catalog="system">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gqN-Ai-Tup" firstAttribute="width" secondItem="FBW-J5-EtI" secondAttribute="width" multiplier="0.45" constant="44.799999999999997" id="w0e-Uo-FSr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UJW-c6-TSN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0ei-0c-u7l"/>
+                            <constraint firstItem="FBW-J5-EtI" firstAttribute="width" secondItem="qXc-hZ-dqE" secondAttribute="width" id="26A-nT-iGT"/>
+                            <constraint firstItem="qXc-hZ-dqE" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.55" id="5fV-aD-dpM"/>
+                            <constraint firstItem="7SJ-Rv-XNR" firstAttribute="top" secondItem="Ceh-hI-bzR" secondAttribute="bottom" constant="10" id="DoC-P9-VxF"/>
+                            <constraint firstItem="RDp-OP-1GR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FHm-4B-Kny"/>
+                            <constraint firstItem="UJW-c6-TSN" firstAttribute="width" secondItem="Ceh-hI-bzR" secondAttribute="width" id="Fxd-Se-7qz"/>
+                            <constraint firstItem="qXc-hZ-dqE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="RqX-Nw-BR0"/>
+                            <constraint firstItem="7SJ-Rv-XNR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Y5g-lw-LFN"/>
+                            <constraint firstItem="qXc-hZ-dqE" firstAttribute="top" secondItem="RDp-OP-1GR" secondAttribute="bottom" constant="20" id="a8v-Kl-2fI"/>
+                            <constraint firstItem="Ceh-hI-bzR" firstAttribute="top" secondItem="UJW-c6-TSN" secondAttribute="bottom" constant="10" id="bWq-uG-mmk"/>
+                            <constraint firstItem="Ceh-hI-bzR" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.5" id="cYo-zc-RRM"/>
+                            <constraint firstItem="Ceh-hI-bzR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fjE-nh-wYa"/>
+                            <constraint firstItem="UJW-c6-TSN" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.15" id="ore-f3-v3P"/>
+                            <constraint firstItem="FBW-J5-EtI" firstAttribute="top" secondItem="qXc-hZ-dqE" secondAttribute="bottom" constant="10" id="qfN-Os-sDO"/>
+                            <constraint firstItem="Ceh-hI-bzR" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.9" id="sWX-h5-ecw"/>
+                            <constraint firstItem="7SJ-Rv-XNR" firstAttribute="width" secondItem="Ceh-hI-bzR" secondAttribute="width" id="u1M-XI-m18"/>
+                            <constraint firstItem="FBW-J5-EtI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xpt-v6-QmK"/>
+                            <constraint firstItem="RDp-OP-1GR" firstAttribute="top" secondItem="7SJ-Rv-XNR" secondAttribute="bottom" constant="10" id="yWk-6s-qJ8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="대장님의 다마고치" id="eqN-fJ-FGZ"/>
                 </viewController>
@@ -34,6 +134,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="acH-8X-2vP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="ckD-ID-wLO"/>
                     </connections>
@@ -44,6 +147,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1-1" width="152" height="151"/>
+        <image name="bubble" width="222" height="142"/>
+        <image name="drop.circle" catalog="system" width="128" height="121"/>
+        <image name="leaf.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

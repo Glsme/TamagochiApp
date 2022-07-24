@@ -73,6 +73,7 @@
 		8533325B288A78EC00F36E2F /* TamagochiApp */ = {
 			isa = PBXGroup;
 			children = (
+				853B89D5288D060400E0DB9C /* Data */,
 				853B89D2288D008D00E0DB9C /* Growth */,
 				8548E327288AD42F00B3790D /* Select */,
 				853B89CD288CD39A00E0DB9C /* UISetting.swift */,
@@ -94,6 +95,15 @@
 			path = Growth;
 			sourceTree = "<group>";
 		};
+		853B89D5288D060400E0DB9C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				853B89C0288C263D00E0DB9C /* TamagochiData.swift */,
+				853B89C2288C26D000E0DB9C /* SelectTamagochi.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		8548E327288AD42F00B3790D /* Select */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +111,6 @@
 				8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */,
 				8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */,
 				85333262288A78EC00F36E2F /* Select.storyboard */,
-				853B89C0288C263D00E0DB9C /* TamagochiData.swift */,
-				853B89C2288C26D000E0DB9C /* SelectTamagochi.swift */,
 			);
 			path = Select;
 			sourceTree = "<group>";
