@@ -11,17 +11,28 @@ class TamagochiInfoViewController: UIViewController {
 
     static var identifier = "TamagochiInfoViewController"
     @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var infoLineView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var overViewLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         configureInfoUI()
     }
     
 
     func configureInfoUI() {
-        infoView.backgroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
+        infoView.backgroundColor = UISetting.backgroundColor
+        infoLineView.backgroundColor = UISetting.fontColor
+        
+        
+    }
+    
+    @IBAction func startButtonClicked(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func cancelButtonClicked(_ sender: UIButton) {
         
     }
 }
