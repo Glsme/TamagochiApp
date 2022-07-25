@@ -7,9 +7,12 @@
 
 import Foundation
 
-let userName = "userName"
-let rice = "rice"
-let water = "water"
-let level = "level"
-let tamagochiName = "tamagochiName"
-let tamagochiImageString = "tamagochiImageString"
+struct UserData {
+    static var userName = "userName"
+    static var rice = "rice"
+    static var water = "water"
+    static var level = "level"
+    static var tamagochiName = "tamagochiName"
+    static var tamagochiImageString = "tamagochiImageString"
+    static var first = "First"
+}

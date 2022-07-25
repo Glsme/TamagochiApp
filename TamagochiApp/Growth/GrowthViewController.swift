@@ -29,7 +29,7 @@ class GrowthViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         talkLabel.text = TalkMent.talkMent.randomElement()
-        userName = UserDefaults.standard.string(forKey: "userName")
+        userName = UserDefaults.standard.string(forKey: UserData.userName)
         self.navigationItem.title = "\(userName!)님의 다마고치"
     }
     
@@ -40,7 +40,7 @@ class GrowthViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UISetting.fontColor, .font: UIFont.systemFont(ofSize: 14, weight: .semibold)]
         
         UISetting.setNameLabelUI(label: titleLabel)
-        titleLabel.text = UserDefaults.standard.string(forKey: "tamagochiName")
+        titleLabel.text = UserDefaults.standard.string(forKey: UserData.tamagochiName)
         
         growthLabel.textColor = UISetting.fontColor
         growthLabel.font = .systemFont(ofSize: 13, weight: .semibold)
@@ -50,31 +50,31 @@ class GrowthViewController: UIViewController {
         
         setButtonUI()
         
-        if UserDefaults.standard.integer(forKey: "rice") != 0 {
-            self.rice = UserDefaults.standard.integer(forKey: "rice")
+        if UserDefaults.standard.integer(forKey: UserData.rice) != 0 {
+            self.rice = UserDefaults.standard.integer(forKey: UserData.rice)
         }
         
-        if UserDefaults.standard.integer(forKey: "water") != 0 {
-            self.water = UserDefaults.standard.integer(forKey: "water")
+        if UserDefaults.standard.integer(forKey: UserData.water) != 0 {
+            self.water = UserDefaults.standard.integer(forKey: UserData.water)
         }
         
-        if UserDefaults.standard.integer(forKey: "level") != 0 {
-            self.level = UserDefaults.standard.integer(forKey: "level")
+        if UserDefaults.standard.integer(forKey: UserData.level) != 0 {
+            self.level = UserDefaults.standard.integer(forKey: UserData.level)
         }
         
         loadImageString()
         setImage()
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
         
-        UserDefaults.standard.set(true, forKey: "First")
+        UserDefaults.standard.set(true, forKey: UserData.first)
         
-        if UserDefaults.standard.string(forKey: "userName") == nil || UserDefaults.standard.string(forKey: "userName") == "" {
-            UserDefaults.standard.set("대장", forKey: "userName")
-            userName = UserDefaults.standard.string(forKey: "userName")!
-            self.navigationItem.title = "\(userName)님의 다마고치"
+        if UserDefaults.standard.string(forKey: UserData.userName) == nil || UserDefaults.standard.string(forKey: UserData.userName) == "" {
+            UserDefaults.standard.set("대장", forKey: UserData.userName)
+            userName = UserDefaults.standard.string(forKey: UserData.userName)!
+            self.navigationItem.title = "\(userName!)님의 다마고치"
         } else {
-            userName = UserDefaults.standard.string(forKey: "userName")!
-            self.navigationItem.title = "\(userName)님의 다마고치"
+            userName = UserDefaults.standard.string(forKey: UserData.userName)!
+            self.navigationItem.title = "\(userName!)님의 다마고치"
         }
     }
     
@@ -111,9 +111,9 @@ class GrowthViewController: UIViewController {
         setImage()
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
         talkLabel.text = TalkMent.talkMent.randomElement()
-        UserDefaults.standard.set(self.imageString, forKey: "tamagochiImageString")
-        UserDefaults.standard.set(self.rice, forKey: "rice")
-        UserDefaults.standard.set(self.level, forKey: "level")
+        UserDefaults.standard.set(self.imageString, forKey: UserData.tamagochiImageString)
+        UserDefaults.standard.set(self.rice, forKey: UserData.rice)
+        UserDefaults.standard.set(self.level, forKey: UserData.level)
     }
     
     @IBAction func waterButtonClicked(_ sender: UIButton) {
@@ -140,8 +140,8 @@ class GrowthViewController: UIViewController {
         setImage()
         growthLabel.text = "LV\(level) ∙ 밥알 \(rice)개 ∙ 물방울 \(water)개"
         talkLabel.text = TalkMent.talkMent.randomElement()
-        UserDefaults.standard.set(self.water, forKey: "water")
-        UserDefaults.standard.set(self.level, forKey: "level")
+        UserDefaults.standard.set(self.water, forKey: UserData.water)
+        UserDefaults.standard.set(self.level, forKey: UserData.level)
     }
     
     func calculateLevel() {
@@ -200,7 +200,7 @@ class GrowthViewController: UIViewController {
     }
     
     func loadImageString() {
-        guard let image = UserDefaults.standard.string(forKey: "tamagochiImageString") else { return }
+        guard let image = UserDefaults.standard.string(forKey: UserData.tamagochiImageString) else { return }
         if image.contains("1-") {
             self.imageString = "1-"
         } else if image.contains("2-") {

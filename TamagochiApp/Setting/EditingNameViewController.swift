@@ -14,7 +14,7 @@ class EditingNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UISetting.backgroundColor
-        userNameTextField.text = UserDefaults.standard.string(forKey: "userName")
+        userNameTextField.text = UserDefaults.standard.string(forKey: UserData.userName)
     }
     
 //    @IBAction func changeUserName(_ sender: UITextField) {
@@ -24,10 +24,13 @@ class EditingNameViewController: UIViewController {
 //    }
     
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
-        if userNameTextField.text != nil {
-            UserDefaults.standard.set(userNameTextField.text!, forKey: "userName")
+        print(userNameTextField.text)
+        if userNameTextField.text != "" {
+            print("true")
+            UserDefaults.standard.set(userNameTextField.text!, forKey: UserData.userName)
         } else {
-            UserDefaults.standard.set("대장", forKey: "userName")
+            print("대장")
+            UserDefaults.standard.set("대장", forKey: UserData.userName)
         }
         
         navigationController?.popViewController(animated: true)
