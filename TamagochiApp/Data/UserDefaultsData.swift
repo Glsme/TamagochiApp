@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// UserDefaults String Data
 struct UserData {
     static var userName = "userName"
     static var rice = "rice"

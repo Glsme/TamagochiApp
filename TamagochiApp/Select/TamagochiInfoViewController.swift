@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 다마고치 상세화면 Controller
 class TamagochiInfoViewController: UIViewController {
 
     static var identifier = "TamagochiInfoViewController"
@@ -27,7 +28,7 @@ class TamagochiInfoViewController: UIViewController {
         putInfoData()
     }
     
-
+    /// 기본 UI 설정 메서드
     func configureInfoUI() {
         infoView.backgroundColor = UISetting.backgroundColor
         infoLineView.backgroundColor = UISetting.fontColor
@@ -42,6 +43,7 @@ class TamagochiInfoViewController: UIViewController {
         overViewLabel.textColor = UISetting.fontColor
     }
     
+    /// 데이터 전달 메서드
     func putInfoData() {
         guard let name = self.name else { return }
         titleLabel.text = name

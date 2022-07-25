@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 말풍선 내 멘트 Data
 struct TalkMent {
     static var talkMent = [
         "오늘 깃허브 푸시 하셨나요?",

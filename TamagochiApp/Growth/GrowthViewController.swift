@@ -27,6 +27,7 @@ class GrowthViewController: UIViewController {
     var imageString: String?
     var imageInt = 1
     
+    ///이름 변경에 따른 UI 구현 관련 메서드
     override func viewWillAppear(_ animated: Bool) {
         talkLabel.text = TalkMent.talkMent.randomElement()
         userName = UserDefaults.standard.string(forKey: UserData.userName)
@@ -78,6 +79,7 @@ class GrowthViewController: UIViewController {
         }
     }
     
+    /// 버튼 UI 설정 메서드
     func setButtonUI() {
         for item in buttons {
             item.layer.borderWidth = 1
@@ -86,6 +88,7 @@ class GrowthViewController: UIViewController {
         }
     }
 
+    /// 밥먹기 버튼 클릭 이벤트 메서드
     @IBAction func riceButtonClicked(_ sender: UIButton) {
         if riceTextField.text! == "" {
             rice += 1
@@ -116,6 +119,7 @@ class GrowthViewController: UIViewController {
         UserDefaults.standard.set(self.level, forKey: UserData.level)
     }
     
+    /// 물먹기 버튼 클릭 이벤트 메서드
     @IBAction func waterButtonClicked(_ sender: UIButton) {
         if waterTextField.text! == "" {
             water += 1
@@ -144,6 +148,7 @@ class GrowthViewController: UIViewController {
         UserDefaults.standard.set(self.level, forKey: UserData.level)
     }
     
+    /// 레벨 계산 메서드
     func calculateLevel() {
         let calculator: Double = Double(rice/5) + Double(water/2)
 //        print(calculator)
@@ -173,6 +178,7 @@ class GrowthViewController: UIViewController {
         }
     }
     
+    /// 이미지 계산 메서드
     func setImage() {
         guard let imageString = self.imageString else { return }
         switch self.level {
@@ -199,6 +205,7 @@ class GrowthViewController: UIViewController {
         }
     }
     
+    /// 이미지 불러오기 메서드
     func loadImageString() {
         guard let image = UserDefaults.standard.string(forKey: UserData.tamagochiImageString) else { return }
         if image.contains("1-") {
@@ -210,6 +217,7 @@ class GrowthViewController: UIViewController {
         }
     }
     
+    /// 화면 탭 시 키보드 내려가기 메서드
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }

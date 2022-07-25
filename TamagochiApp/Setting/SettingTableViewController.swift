@@ -7,10 +7,12 @@
 
 import UIKit
 
+///Setting 화면 Controller
 class SettingTableViewController: UITableViewController {
     
     var userName = "대장"
-
+    
+    /// 유저 이름 reload 관련 메서드
     override func viewWillAppear(_ animated: Bool) {
         UserDefaults.standard.string(forKey: "userName")
         tableView.reloadData()
@@ -28,10 +30,12 @@ class SettingTableViewController: UITableViewController {
         }
     }
     
+    /// TableViewCell 개수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-
+    
+    /// TableViewCell UI 및 데이터
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath.row {
@@ -54,6 +58,7 @@ class SettingTableViewController: UITableViewController {
         }
     }
     
+    /// TableViewCell 선택 시 indexPath 값에 따른 동작 구현
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 2 {
             showInitAlert()
@@ -68,6 +73,7 @@ class SettingTableViewController: UITableViewController {
         }
     }
     
+    /// 초기화 Alert 메서드
     func showInitAlert() {
         
         let alert = UIAlertController(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가용?", preferredStyle: .alert)
@@ -84,6 +90,7 @@ class SettingTableViewController: UITableViewController {
         
     }
 
+    /// 초기화 시 view change 메서드
     func changeView() {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
@@ -98,6 +105,7 @@ class SettingTableViewController: UITableViewController {
 //        self.present(navigationController, animated: true)
     }
     
+    /// 유저 데이터 초기화 메서드
     func initData() {
         UserDefaults.standard.removeObject(forKey: "rice")
         UserDefaults.standard.removeObject(forKey: "water")

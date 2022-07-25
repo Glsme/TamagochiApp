@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Select Tamagochi Struct
 struct SelectTamagochi {
     var name: String
     var image: String

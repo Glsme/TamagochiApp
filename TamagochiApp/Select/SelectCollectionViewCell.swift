@@ -14,6 +14,7 @@ class SelectCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var selectImageView: UIImageView!
     @IBOutlet weak var selectLabel: UILabel!
     
+    /// 데이터 전달 메서드
     func configureCell(data: SelectTamagochi) {
         selectImageView.image = UIImage(named: data.image)
         selectLabel.text = data.name

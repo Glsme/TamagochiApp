@@ -7,8 +7,10 @@
 
 import UIKit
 
+/// 이름 변경하기 화면 Controller
 class EditingNameViewController: UIViewController {
 
+    /// 이름 변경 Text Field
     @IBOutlet weak var userNameTextField: UITextField!
     
     override func viewDidLoad() {
@@ -23,8 +25,9 @@ class EditingNameViewController: UIViewController {
 //        }
 //    }
     
+    /// 저장 버튼 클릭 이벤트 메서드
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
-        print(userNameTextField.text)
+//        print(userNameTextField.text)
         if userNameTextField.text != "" {
             print("true")
             UserDefaults.standard.set(userNameTextField.text!, forKey: UserData.userName)
@@ -36,6 +39,7 @@ class EditingNameViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    /// 화면 탭 시 키보드 내려가기 구현 메서드
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }

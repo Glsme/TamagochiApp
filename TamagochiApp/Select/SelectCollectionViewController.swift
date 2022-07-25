@@ -22,6 +22,7 @@ class SelectCollectionViewController: UICollectionViewController {
         setCollectionUI()
     }
     
+    /// CollectionViewCell UI 설정 메서드
     func setCollectionUI() {
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 10
@@ -34,11 +35,13 @@ class SelectCollectionViewController: UICollectionViewController {
         collectionView.collectionViewLayout = layout
     }
     
+    /// CollectionViewCell 개수
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        tamagochiList.tamaghochiData.count
         21
     }
     
+    /// CollectionViewCell UI 및 데이터 설정
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectCollectionViewCell.identifier, for: indexPath) as? SelectCollectionViewCell else { return UICollectionViewCell() }
         
@@ -62,6 +65,7 @@ class SelectCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    /// CollectionViewCell 클릭 시 이벤트 메서드
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         if indexPath.row < tamagochiList.tamaghochiData.count {

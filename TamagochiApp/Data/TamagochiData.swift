@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 실제 Tamagochi에 대한 데이터 저장 구조체
 struct TamagochiData {
     let tamaghochiData: [SelectTamagochi] = [
         SelectTamagochi(name: "따끔따끔 다마고치", image: "1-6", overView: "저는 선인장 다마고치입니다. 키는 2cm 몸무게는 150g이에요. \n성격은 소심하지만 마음은 따뜻해요. \n열심히 잘 먹고 잘 클 자신은 있답니다. \n반가워요 주인님!!"),
