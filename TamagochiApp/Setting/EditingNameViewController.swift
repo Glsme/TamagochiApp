@@ -17,10 +17,20 @@ class EditingNameViewController: UIViewController {
         userNameTextField.text = UserDefaults.standard.string(forKey: "userName")
     }
     
-    @IBAction func changeUserName(_ sender: UITextField) {
+//    @IBAction func changeUserName(_ sender: UITextField) {
+//        if userNameTextField.text != nil {
+//            UserDefaults.standard.set(userNameTextField.text!, forKey: "userName")
+//        }
+//    }
+    
+    @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
         if userNameTextField.text != nil {
             UserDefaults.standard.set(userNameTextField.text!, forKey: "userName")
+        } else {
+            UserDefaults.standard.set("대장", forKey: "userName")
         }
+        
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {

@@ -25,6 +25,7 @@
 		8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */; };
 		8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */; };
 		85C8244C288D709300FBB5DE /* EditingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C8244B288D709300FBB5DE /* EditingNameViewController.swift */; };
+		85C82452288DA69700FBB5DE /* UserDefaultsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C82451288DA69700FBB5DE /* UserDefaultsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
 		8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		85C8244B288D709300FBB5DE /* EditingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingNameViewController.swift; sourceTree = "<group>"; };
+		85C82451288DA69700FBB5DE /* UserDefaultsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		853B89D5288D060400E0DB9C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				85C82451288DA69700FBB5DE /* UserDefaultsData.swift */,
 				853B89C0288C263D00E0DB9C /* TamagochiData.swift */,
 				853B89C2288C26D000E0DB9C /* SelectTamagochi.swift */,
 				853B89E0288D2EC600E0DB9C /* TalkMent.swift */,
@@ -214,6 +217,7 @@
 			files = (
 				853B89E6288D482C00E0DB9C /* SettingTableViewController.swift in Sources */,
 				8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */,
+				85C82452288DA69700FBB5DE /* UserDefaultsData.swift in Sources */,
 				853B89D4288D011200E0DB9C /* GrowthViewController.swift in Sources */,
 				853B89C1288C263D00E0DB9C /* TamagochiData.swift in Sources */,
 				8533325D288A78EC00F36E2F /* AppDelegate.swift in Sources */,
@@ -374,6 +378,7 @@
 				DEVELOPMENT_TEAM = 3K4KWAG7KD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TamagochiApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "홍석준";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Select;
@@ -404,6 +409,7 @@
 				DEVELOPMENT_TEAM = 3K4KWAG7KD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TamagochiApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "홍석준";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Select;

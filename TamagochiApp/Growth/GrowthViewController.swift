@@ -19,7 +19,7 @@ class GrowthViewController: UIViewController {
     @IBOutlet weak var waterTextField: UITextField!
     @IBOutlet var buttons: [UIButton]!
     
-    
+    var userName: String?
     var name: String?
     var level = 1
     var rice = 0
@@ -29,6 +29,8 @@ class GrowthViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         talkLabel.text = TalkMent.talkMent.randomElement()
+        userName = UserDefaults.standard.string(forKey: "userName")
+        self.navigationItem.title = "\(userName!)님의 다마고치"
     }
     
     override func viewDidLoad() {
@@ -68,10 +70,10 @@ class GrowthViewController: UIViewController {
         
         if UserDefaults.standard.string(forKey: "userName") == nil || UserDefaults.standard.string(forKey: "userName") == "" {
             UserDefaults.standard.set("대장", forKey: "userName")
-            let userName = UserDefaults.standard.string(forKey: "userName")!
+            userName = UserDefaults.standard.string(forKey: "userName")!
             self.navigationItem.title = "\(userName)님의 다마고치"
         } else {
-            let userName = UserDefaults.standard.string(forKey: "userName")!
+            userName = UserDefaults.standard.string(forKey: "userName")!
             self.navigationItem.title = "\(userName)님의 다마고치"
         }
     }
@@ -92,6 +94,7 @@ class GrowthViewController: UIViewController {
             if Int(riceTextField.text!) != nil {
                 if Int(riceTextField.text!)! < 100 {
                     rice += Int(riceTextField.text!)!
+                    riceTextField.placeholder = "밥주세용"
                 } else {
                     riceTextField.text = ""
                     riceTextField.placeholder = "99 이하로 입력해주세요"
@@ -99,6 +102,7 @@ class GrowthViewController: UIViewController {
                 }
             } else {
                 riceTextField.placeholder = "숫자만 입력해주세요"
+                return
             }
         }
         riceTextField.text = ""
@@ -119,12 +123,15 @@ class GrowthViewController: UIViewController {
             if Int(waterTextField.text!) != nil {
                 if Int(waterTextField.text!)! < 50 {
                     water += Int(waterTextField.text!)!
+                    waterTextField.placeholder = "물주세용"
                 } else {
                     waterTextField.text = ""
                     waterTextField.placeholder = "49 이하로 입력해주세요"
+                    return
                 }
             } else {
                 waterTextField.placeholder = "숫자만 입력해주세요"
+                return
             }
         }
         waterTextField.text = ""

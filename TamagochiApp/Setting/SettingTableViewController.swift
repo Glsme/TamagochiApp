@@ -11,6 +11,11 @@ class SettingTableViewController: UITableViewController {
     
     var userName = "대장"
 
+    override func viewWillAppear(_ animated: Bool) {
+        UserDefaults.standard.string(forKey: "userName")
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +37,7 @@ class SettingTableViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EditiingTableViewCell") else { return UITableViewCell() }
+            userName = UserDefaults.standard.string(forKey: "userName")!
             cell.detailTextLabel?.text = "\(userName)"
             cell.detailTextLabel?.textColor = UISetting.fontColor
             return cell
@@ -63,6 +69,7 @@ class SettingTableViewController: UITableViewController {
     }
     
     func showInitAlert() {
+        
         let alert = UIAlertController(title: "데이터 초기화", message: "정말 다시 처음부터 시작하실 건가용?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "웅", style: .default) { action in
             self.initData()
@@ -78,12 +85,17 @@ class SettingTableViewController: UITableViewController {
     }
 
     func changeView() {
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        
         let storyBoard = UIStoryboard(name: "Select", bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as! SelectCollectionViewController
         let navigationController = UINavigationController(rootViewController: vc)
         
-        navigationController.modalPresentationStyle = .overFullScreen
-        self.present(navigationController, animated: true)
+        sceneDelegate?.window?.rootViewController = navigationController
+        sceneDelegate?.window?.makeKeyAndVisible()
+//        navigationController.modalPresentationStyle = .overFullScreen
+//        self.present(navigationController, animated: true)
     }
     
     func initData() {

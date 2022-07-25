@@ -99,7 +99,7 @@
                                     <constraint firstItem="gqN-Ai-Tup" firstAttribute="width" secondItem="FBW-J5-EtI" secondAttribute="width" multiplier="0.45" constant="44.799999999999997" id="w0e-Uo-FSr"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM0-pP-K3d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM0-pP-K3d">
                                 <rect key="frame" x="114" y="207" width="186" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
@@ -302,9 +302,6 @@
                                 <color key="textColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="changeUserName:" destination="h1A-et-Xfj" eventType="editingDidEnd" id="EsJ-pz-MuX"/>
-                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDZ-KW-U7a">
                                 <rect key="frame" x="41.5" y="127.5" width="331" height="1"/>
@@ -329,7 +326,14 @@
                             <outletCollection property="gestureRecognizers" destination="gMn-du-HgK" appends="YES" id="VZD-bE-rqX"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="대장님 이름 정하기" id="NfE-Bn-uIf"/>
+                    <navigationItem key="navigationItem" title="대장님 이름 정하기" id="NfE-Bn-uIf">
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="qmh-K5-kkb">
+                            <color key="tintColor" red="0.30196078430000001" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="h1A-et-Xfj" id="NSE-Y2-Tc3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="userNameTextField" destination="dCP-ji-hhC" id="mre-ky-1FH"/>
                     </connections>
