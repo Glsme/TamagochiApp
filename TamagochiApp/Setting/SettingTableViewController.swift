@@ -14,6 +14,8 @@ class SettingTableViewController: UITableViewController {
     
     /// 유저 이름 reload 관련 메서드
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         UserDefaults.standard.string(forKey: "userName")
         tableView.reloadData()
     }

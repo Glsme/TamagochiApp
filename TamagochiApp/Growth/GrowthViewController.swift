@@ -29,6 +29,8 @@ class GrowthViewController: UIViewController {
     
     ///이름 변경에 따른 UI 구현 관련 메서드
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         talkLabel.text = TalkMent.talkMent.randomElement()
         userName = UserDefaults.standard.string(forKey: UserData.userName)
         self.navigationItem.title = "\(userName!)님의 다마고치"
