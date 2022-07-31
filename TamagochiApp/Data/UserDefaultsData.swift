@@ -9,11 +9,11 @@ import Foundation
 
 /// UserDefaults String Data
 struct UserData {
-    static var userName = "userName"
-    static var rice = "rice"
-    static var water = "water"
-    static var level = "level"
-    static var tamagochiName = "tamagochiName"
-    static var tamagochiImageString = "tamagochiImageString"
-    static var first = "First"
+    static let userName = "userName"
+    static let rice = "rice"
+    static let water = "water"
+    static let level = "level"
+    static let tamagochiName = "tamagochiName"
+    static let tamagochiImageString = "tamagochiImageString"
+    static let first = "First"
 }
