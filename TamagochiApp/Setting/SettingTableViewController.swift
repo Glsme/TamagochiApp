@@ -117,5 +117,6 @@ class SettingTableViewController: UITableViewController {
         UserDefaults.standard.removeObject(forKey: "tamagochiName")
         UserDefaults.standard.removeObject(forKey: "First")
         
+//        UserDefaults.standard.removePersistentDomain(forName: )
     }
 }

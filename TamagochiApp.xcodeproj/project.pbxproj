@@ -25,6 +25,7 @@
 		8548E326288AD40A00B3790D /* SelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */; };
 		8548E329288AD44D00B3790D /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */; };
 		8570A2982897B50600CB255C /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8570A2972897B50600CB255C /* UserDefaultsHelper.swift */; };
+		8570A29B2897CBF500CB255C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8570A29A2897CBF500CB255C /* UIColor+Extension.swift */; };
 		85C8244C288D709300FBB5DE /* EditingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C8244B288D709300FBB5DE /* EditingNameViewController.swift */; };
 		85C82452288DA69700FBB5DE /* UserDefaultsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C82451288DA69700FBB5DE /* UserDefaultsData.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		8548E325288AD40A00B3790D /* SelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewController.swift; sourceTree = "<group>"; };
 		8548E328288AD44D00B3790D /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		8570A2972897B50600CB255C /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		8570A29A2897CBF500CB255C /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		85C8244B288D709300FBB5DE /* EditingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingNameViewController.swift; sourceTree = "<group>"; };
 		85C82451288DA69700FBB5DE /* UserDefaultsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 		8533325B288A78EC00F36E2F /* TamagochiApp */ = {
 			isa = PBXGroup;
 			children = (
+				8570A2992897CBAC00CB255C /* Extension */,
 				8570A2962897B4BE00CB255C /* Constant */,
 				853B89E2288D44C000E0DB9C /* Setting */,
 				853B89D5288D060400E0DB9C /* Data */,
@@ -146,6 +149,14 @@
 				8570A2972897B50600CB255C /* UserDefaultsHelper.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		8570A2992897CBAC00CB255C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8570A29A2897CBF500CB255C /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 				853B89D4288D011200E0DB9C /* GrowthViewController.swift in Sources */,
 				853B89C1288C263D00E0DB9C /* TamagochiData.swift in Sources */,
 				8533325D288A78EC00F36E2F /* AppDelegate.swift in Sources */,
+				8570A29B2897CBF500CB255C /* UIColor+Extension.swift in Sources */,
 				853B89C3288C26D000E0DB9C /* SelectTamagochi.swift in Sources */,
 				85C8244C288D709300FBB5DE /* EditingNameViewController.swift in Sources */,
 				853B89CC288C3D8700E0DB9C /* TamagochiInfoViewController.swift in Sources */,

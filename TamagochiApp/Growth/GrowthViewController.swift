@@ -140,6 +140,7 @@ class GrowthViewController: UIViewController {
                 return
             }
         }
+        
         waterTextField.text = ""
         calculateLevel()
         loadImageString()

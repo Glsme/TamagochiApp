@@ -17,7 +17,7 @@ class UserDefaultsHelper {
     let userDefaults = UserDefaults.standard
     
     enum Key: String {
-        case userName, rice, water
+        case userName, rice, water, first
     }
     
     var userName: String {
@@ -47,6 +47,16 @@ class UserDefaultsHelper {
         
         set {
             userDefaults.set(newValue, forKey: Key.water.rawValue)
+        }
+    }
+    
+    var first: Bool {
+        get {
+            return userDefaults.bool(forKey: Key.first.rawValue)
+        }
+        
+        set {
+            userDefaults.set(newValue, forKey: Key.first.rawValue)
         }
     }
 }
