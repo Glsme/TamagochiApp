@@ -153,30 +153,12 @@ class GrowthViewController: UIViewController {
     /// 레벨 계산 메서드
     func calculateLevel() {
         let calculator: Double = Double(rice/5) + Double(water/2)
-//        print(calculator)
-        switch calculator {
-        case 0..<20:
+        print(calculator)
+        
+        if calculator < 20 {
             level = 1
-        case 20..<30:
-            level = 2
-        case 30..<40:
-            level = 3
-        case 40..<50:
-            level = 4
-        case 50..<60:
-            level = 5
-        case 60..<70:
-            level = 6
-        case 70..<80:
-            level = 7
-        case 80..<90:
-            level = 8
-        case 90..<100:
-            level = 9
-        case 100...:
-            level = 10
-        default:
-            level = 1
+        } else {
+            level = Int(calculator) / 10
         }
     }
     
