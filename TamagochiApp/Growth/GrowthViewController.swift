@@ -158,6 +158,8 @@ class GrowthViewController: UIViewController {
         
         if calculator < 20 {
             level = 1
+        } else if calculator > 100 {
+            level = 10
         } else {
             level = Int(calculator) / 10
         }

@@ -23,7 +23,7 @@ class SettingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.tintColor = UISetting.fontColor
+        self.navigationController?.navigationBar.tintColor = .tamagochiFontColor
         
         if UserDefaults.standard.string(forKey: "userName") == nil || UserDefaults.standard.string(forKey: "userName") == "" {
             UserDefaults.standard.set("대장", forKey: "userName")

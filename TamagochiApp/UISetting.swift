@@ -9,6 +9,9 @@ import UIKit
 
 /// UI 설정 관련 구조체
 struct UISetting {
+    
+    private init() { }
+    
     static var fontColor = UIColor(red: 77/255, green: 106/255, blue: 120/255, alpha: 1)
     static var backgroundColor = UIColor(red: 245/255, green: 252/255, blue: 252/255, alpha: 1)
     static var regularFont = UIFont.systemFont(ofSize: 13, weight: .regular)
