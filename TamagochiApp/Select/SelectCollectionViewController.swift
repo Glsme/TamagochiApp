@@ -69,7 +69,7 @@ class SelectCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         if indexPath.row < tamagochiList.tamaghochiData.count {
-            let storyBorad = UIStoryboard(name: "Select", bundle: nil)
+            let storyBorad = UIStoryboard(name: StoryboardName.Select.rawValue, bundle: nil)
             guard let vc = storyBorad.instantiateViewController(withIdentifier: TamagochiInfoViewController.identifier) as? TamagochiInfoViewController else { return }
             
             vc.name = tamagochiList.tamaghochiData[indexPath.row].name

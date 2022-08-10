@@ -21,12 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if UserDefaults.standard.bool(forKey: "First") {
             print(UserDefaults.standard.bool(forKey: "First"))
-            let storyBoard = UIStoryboard(name: "Growth", bundle: nil)
+            let storyBoard = UIStoryboard(name: StoryboardName.Growth.rawValue, bundle: nil)
             let vc = storyBoard.instantiateViewController(withIdentifier: GrowthViewController.identifier) as! GrowthViewController
             
             window?.rootViewController = UINavigationController(rootViewController: vc)
         } else {
-            let storyBoard = UIStoryboard(name: "Select", bundle: nil)
+            let storyBoard = UIStoryboard(name: StoryboardName.Select.rawValue, bundle: nil)
             let vc = storyBoard.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as! SelectCollectionViewController
             
             window?.rootViewController = UINavigationController(rootViewController: vc)

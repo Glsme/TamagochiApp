@@ -65,7 +65,7 @@ class SettingTableViewController: UITableViewController {
         if indexPath.row == 2 {
             showInitAlert()
         } else if indexPath.row == 1 {
-            let storyBoard = UIStoryboard(name: "Select", bundle: nil)
+            let storyBoard = UIStoryboard(name: StoryboardName.Select.rawValue, bundle: nil)
             let vc = storyBoard.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as! SelectCollectionViewController
             
 //            let navigationController = UINavigationController(rootViewController: vc)
@@ -97,7 +97,7 @@ class SettingTableViewController: UITableViewController {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         let sceneDelegate = windowScene?.delegate as? SceneDelegate
         
-        let storyBoard = UIStoryboard(name: "Select", bundle: nil)
+        let storyBoard = UIStoryboard(name: StoryboardName.Select.rawValue, bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: SelectCollectionViewController.identifier) as! SelectCollectionViewController
         let navigationController = UINavigationController(rootViewController: vc)
         
